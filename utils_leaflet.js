@@ -94,7 +94,7 @@ function highlightPano(pano, map) {
 
         // Update the pano image
         const panoImg = document.getElementById("panoImg");
-        panoImg.src = `./panos/${pano.pano_id}.png`;
+        panoImg.src = `./public/panos/${pano.pano_id}.png`;
 
         // zoom to the pano
         const panoLatLng = L.latLng(pano.location.Y, pano.location.X);
