@@ -1,0 +1,34 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+}
+
+#map {
+    position: relative;
+    height: 100%;
+}
+
+.title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-style: bold;
+}
+
+.leaflet-popup-content .custom-popup img {
+    width: 200px;
+    height: auto;
+    margin: auto;
+}
+
+.overlay {
+    z-index: 1000;
+}

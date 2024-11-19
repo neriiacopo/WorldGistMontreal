@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>World Gist</title>
+
+        <!-- Import Tailwind -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Import FavIcons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        />
+
+        <!-- Import Leaflet  -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet/dist/leaflet.css"
+        />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+        <!-- Import Fonts  -->
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Import Custom css -->
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+    </head>
+    <body class="flex flex-col h-full">
+        <!-- Title and Subtitle -->
+        <div class="flex items-center justify-center flex-col h-1/6 pt-20">
+            <h1 class="text-5xl font-bold title">World Gist</h1>
+            <p class="text-lg text-gray-600">
+                Dissecting OpenCLiP's dormant image of the city - Montreal
+            </p>
+        </div>
+
+        <!-- Input and Button -->
+        <div class="flex items-center justify-center h-1/6">
+            <input
+                id="textInput"
+                type="text"
+                class="border rounded-full px-4 py-2 mx-2 w-1/2 text-center"
+                placeholder="An image of a {x} public space"
+            />
+            <button
+                id="runBtn"
+                class="bg-blue-500 rounded-full mx-4 text-white px-4 py-2"
+            >
+                Run
+            </button>
+        </div>
+
+        <div
+            id="map"
+            class="w-11/12 mx-auto mb-10 rounded-lg border bg-blue-500 relative h-full shadow-lg"
+        >
+            <div
+                id="panoViewport"
+                class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[90%] max-h-[90%] overlay shadow-lg"
+            >
+                <img
+                    id="panoImg"
+                    src=""
+                    class="w-full h-full rounded-lg"
+                    alt="Panoramic"
+                />
+                <button
+                    id="closePanoBtn"
+                    class="absolute top-2 right-2 bg-white text-gray-800 rounded-full p-2 cursor-pointer pointer-events-auto shadow-lg flex items-center justify-center border border-gray-500"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Colophon -->
+        <div
+            class="flex items-center justify-center h-1/12 pb-5 flex-col text-gray-500"
+        >
+            <p class="text-sm">
+                World Gist
+
+                <a
+                    href="https://doi.org/10.5167/uzh-240287"
+                    target="_blank"
+                    class=""
+                >
+                    <i class="fa-solid fa-file"></i>
+                </a>
+            </p>
+            <p class="text-xs">D. Negueruela del Castillo & I.Neri</p>
+            <p class="text-xs">
+                <a
+                    href="https://dvstudies.net/"
+                    target="_blank"
+                >
+                    (MPG) Digital Visual Studies - UZH &copy; 2024</a
+                >
+            </p>
+        </div>
+
+        <script
+            src="script_leaflet.js"
+            type="module"
+        ></script>
+    </body>
+</html>
